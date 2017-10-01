@@ -9,19 +9,17 @@ int main()
 {
     int resp=1000;
     VectorContactos *contcs=new VectorContactos();
-
-
-      while(resp!=0)
-        {
-        cout<<"Que desea hacer:\n1. Agregar contacto.\n2. Mostrar contactos.\n3. Mueva a arbol.\n4. Buscar Contacto.\n5. Buscar en arbol.\n6. Agregar numero.\n7. Borre Contacto.\n0. Terminar"<<endl;
+    Contacto *cont=new Contacto();
+      while(resp!=0){
+        cout<<"Que desea hacer:\n1. Agregar contacto.\n2. Mostrar contactos.\n0. Terminar"<<endl;
         cin>>resp;
-
         if(resp==1){
             string nombre="";
             string apellido="";
             string tipo="";
             string email="";
-            string categoria="";
+            string tipoNum="";
+            int numero=0;
             cout<<"De el nombre del contacto: "<<endl;
             cin>>nombre;
             cout<<"El apellido: "<<endl;
@@ -30,15 +28,18 @@ int main()
             cin>>tipo;
             cout<<"Cual es el email: "<<endl;
             cin>>email;
-            contcs->inserte(Contacto(nombre,apellido,tipo,email));
-}
+            cout<<"Que tipo de numero va a agregar: "<<endl;
+            cin>>tipoNum;
+            cout<<"Cual es el numero: "<<endl;
+            cin>>numero;
+            cont->setData(nombre,apellido,tipo,email,tipoNum,numero);
+            contcs->inserte(cont);
+        }else if(resp==2){
+                contcs->show();
         }
-        contcs->show();
-
-          }
-
-
-
+    }
+    return 0;
+}
 
 
 
