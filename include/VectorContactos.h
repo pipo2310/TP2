@@ -8,7 +8,7 @@ class VectorContactos
     public:
         VectorContactos();
         virtual ~VectorContactos();
-        void inserte(Contacto c);
+        void inserte(Contacto *c);
         void show();
 
     protected:
