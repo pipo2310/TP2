@@ -12,17 +12,18 @@ VectorContactos::~VectorContactos()
 {
     //dtor
 }
-void VectorContactos::inserte(Contacto c)
+void VectorContactos::inserte(Contacto *c)
 {
-    vecCont.push_back(c);
+    vecCont.push_back(*c);
 }
 
 
 void VectorContactos::show()
 {
-    std::vector<Contacto>::iterator it;
+    vector<Contacto>::iterator it;
+    cout<<"Contactos: "<<"\n"<<endl;
     for(it=vecCont.begin(); it<vecCont.end(); it++)
     {
-        cout<<"Nombre: "<<it->nombre<<"\nApellido: "<<it->apellido<<"\nTipo: "<<it->tipo<<"\nEmail: "<<it->email<<"\n"<<endl;
+        cout<<it->getData()<<"\n"<<endl;
     }
 }
