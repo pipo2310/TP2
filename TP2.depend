@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1506459402 source:c:\users\cristian\desktop\tp2\main.cpp
+	<iostream>
+	<vector>
+	"Contacto.h"
+	"VectorContactos.h"
+
+1506459917 c:\users\cristian\desktop\tp2\include\contacto.h
+	<string>
+	<vector>
+	<algorithm>
+	<iterator>
+
+1506460010 source:c:\users\cristian\desktop\tp2\src\contacto.cpp
+	"Contacto.h"
+	<sstream>
+
+1506459917 source:c:\users\cristian\desktop\tp2\src\vectorcontactos.cpp
+	"VectorContactos.h"
+	"Contacto.h"
+	<iostream>
+
+1506459338 c:\users\cristian\desktop\tp2\include\vectorcontactos.h
+	<vector>
+	"Contacto.h"
+
